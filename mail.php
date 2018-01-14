@@ -1,23 +1,22 @@
 <?php
 requiere 'PHPMailer/PHPMailerAutoload.php';
 
-
 $mail= new PHPMailer();
 
 $mail->Host='smtp.gmail.com';
 
 $mail->SMTPauth='true';
 
-$mail->Username='micorreode@gmail.com';
+$mail->Username='diamantepro@gmail.com';
 
-$mail->Pasword='temp()la-contraseña-de-migmail@password';
+$mail->Pasword='temp(diamantepro9991)';
 
 $mail->SMTPSECURE='tls';
 
-$mail->Port=elpuertodemigmail;
+$mail->Port=587;
 
 
-$mail->Setfrom('micorreo@gmail.com','Mi nombre: Developers);
+$mail->Setfrom('diamantepro@gmail.com','Hola Pros xD: Developers);
 $mail->addAddress('poner-otro-correo-mas-xd@gmail.com')
 $mail->addReplyto('otrocorreomio@gmail.com')','Info');
 
