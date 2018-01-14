@@ -1,34 +1,36 @@
 <?php
-requiere 'PHPMailer/PHPMailerAutoload.php';
+require 'PHPMailer/PHPMailerAutoload.php';
 
 $mail= new PHPMailer();
 
 $mail->Host='smtp.gmail.com';
 
-$mail->SMTPauth='true';
+$mail->SMTPAuth='true';
 
-$mail->Username='diamantepro@gmail.com';
+$mail->Username='diamantepro@gmail.com';     // valid mail id
 
-$mail->Pasword='temp(diamantepro9991)';
+$mail->Password='diamantepro9991';    // valid mail pass 
 
-$mail->SMTPSECURE='tls';
+$mail->SMTPSecure='tls';
 
 $mail->Port=587;
 
 
-$mail->Setfrom('diamantepro@gmail.com','Hola Pros xD: Developers);
-$mail->addAddress('poner-otro-correo-mas-xd@gmail.com')
-$mail->addReplyto('otrocorreomio@gmail.com')','Info');
+$mail->SetFrom('Developer@cserockers.ga','Developer');
+$mail->addAddress('add to address');   // add To address
+$mail->addReplyTo('Noreply@cserockers.ga','Info');
+$mail->isHTML(true);
+$mail->addAttachment('1.jpeg','new.jpeg');
+$mail->Subject='U-tube';
+$mail->Body='Sample For U-tube Viewers<br> <h1>hello</h1> ';
 
-$mail->Subject='Nombre que aparece en el gmail';
-$mail->Body='subtitulo del gmail'
 
 if($mail->send())
 {
-echo'Mail Sent';
+	echo'Mail Sent';
 }
 else
 {
-echo "Mail sending failed";
-
-
+	echo "Mail sending failed";
+}
+?>
